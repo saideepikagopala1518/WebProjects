@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Eduardo/Documents/CarlosAutoz/Cars/src/java/controllers/AddingCartController.java</file>
+            <file>file:/C:/Users/Eduardo/Documents/CarlosAutoz/Cars/web/addtocart.jsp</file>
+            <file>file:/C:/Users/Eduardo/Documents/CarlosAutoz/Cars/src/java/controllers/CartDeletionController.java</file>
+            <file>file:/C:/Users/Eduardo/Documents/CarlosAutoz/Cars/web/orders.jsp</file>
+            <file>file:/C:/Users/Eduardo/Documents/CarlosAutoz/Cars/web/checkout.jsp</file>
+            <file>file:/C:/Users/Eduardo/Documents/CarlosAutoz/Cars/src/java/Beans/activeCart.java</file>
+            <file>file:/C:/Users/Eduardo/Documents/CarlosAutoz/Cars/web/cart.jsp</file>
+            <file>file:/C:/Users/Eduardo/Documents/CarlosAutoz/Cars/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/Eduardo/Documents/CarlosAutoz/Cars/src/java/Beans/User.java</file>
+            <file>file:/C:/Users/Eduardo/Documents/CarlosAutoz/Cars/web/login_form.jsp</file>
+            <file>file:/C:/Users/Eduardo/Documents/CarlosAutoz/Cars/src/java/controllers/RegisterController.java</file>
+            <file>file:/C:/Users/Eduardo/Documents/CarlosAutoz/Cars/src/java/controllers/CheckoutController.java</file>
+            <file>file:/C:/Users/Eduardo/Documents/CarlosAutoz/Cars/src/java/Beans/Order.java</file>
+            <file>file:/C:/Users/Eduardo/Documents/CarlosAutoz/Cars/web/used_cars.jsp</file>
+            <file>file:/C:/Users/Eduardo/Documents/CarlosAutoz/Cars/web/index.jsp</file>
+            <file>file:/C:/Users/Eduardo/Documents/CarlosAutoz/Cars/web/users.jsp</file>
+            <file>file:/C:/Users/Eduardo/Documents/CarlosAutoz/Cars/src/java/controllers/LoginController.java</file>
+            <file>file:/C:/Users/Eduardo/Documents/CarlosAutoz/Cars/web/new_cars.jsp</file>
+        </group>
+    </open-files>
+</project-private>
