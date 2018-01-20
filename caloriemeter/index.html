@@ -1,0 +1,164 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Calorie Meter</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC|Slackey" rel="stylesheet">
+        <!-- <link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet"> -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:400i" rel="stylesheet">
+        <link rel="stylesheet" href="css/normalize.css">
+
+        <link rel="stylesheet" href="css/themes/tooltipster-sideTip-noir.min.css">
+        <link rel="stylesheet" href="css/tooltipster.core.css">
+        <link rel="stylesheet" href="css/tooltipster.bundle.css">
+        <script src="https://use.fontawesome.com/1e7db2f15d.js"></script>
+        <link type="text/css" rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"><!-- This library analyzes the features supported by the user's browser and displays accrdingly -->
+        </script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div class="wrapper">
+            <main class="menu">
+                <header>
+                    <h1>Burrito Factory!!</h1>
+                    <div class="subHeader ">
+                        <h2>Create a burrito of your choice..</h2>
+                        <p>..yummy food for your tummy!!</p>
+                    </div>
+                </header>
+                <div class="wrapper__box">
+                    <section class="ingredients__box">
+
+                         <label for="tortilla">
+                            <div class="ingredients__box--pictures tortilla">
+                           <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                <input type="checkbox" name="ingredients" class="ingredient" value="tortilla" id="tortilla">
+                                <img src="img/tortilla.png" alt="tortilla image" class="tooltip" title="Fresh Tortilla!">
+                             </div>
+                        </label>
+
+                        <label for="beef">
+                            <div class="ingredients__box--pictures beef">
+                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                <input type="checkbox" name="ingredients" class="ingredient" value="beef" id="beef">
+                                <img src="img/beef.png" alt="beef image" class="tooltip" title="Add Some Beef!">
+                            </div>
+                        </label>
+                         <label for="salsa">
+                            <div class="ingredients__box--pictures salsa">
+                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                <input type="checkbox" name="ingredients" class="ingredient" value="salsa" id="salsa">
+                                <img src="img/salsa.png" alt="salsa image" class="tooltip" title="Salsa?">
+                            </div>
+                        </label>
+                        <label for="guacamole">
+                            <div class="ingredients__box--pictures guacamole"><i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                <input type="checkbox" name="ingredients" class="ingredient" value="guacamole" id="guacamole">
+                                <img src="img/guacamole.png" alt="guacamole image" class="tooltip" title="Try the guacamole!">
+                            </div>
+                        </label>
+                        <label for="lettuce">
+                            <div class="ingredients__box--pictures lettuce">
+                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                <input type="checkbox" name="ingredients" class="ingredient" value="lettuce" id="lettuce">
+                               <img src="img/lettuce.png" alt="lettuce image" class="tooltip" title="Lettuce is just a filler.">
+                            </div>
+                        </label>
+                        <label for="cheese">
+                            <div class="ingredients__box--pictures cheese">
+                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                <input type="checkbox" name="ingredients" class="ingredient" value="cheese" id="cheese">
+                                <img src="img/cheese.png" alt="cheese image" class="tooltip" title="Cheese! So good!">
+                            </div>
+                        </label>
+                        <label for="sourCream">
+                            <div class="ingredients__box--pictures sourCream"><i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                <input type="checkbox" name="ingredients" class="ingredient" value="sourCream" id="sourCream">
+                                <img src="img/sourCream.png" alt="sour cream image" class="tooltip" title="Sour Cream.  Try it.">
+                        </div>
+                        </label>
+                       <label for="beans">
+                            <div class="ingredients__box--pictures beans">
+                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                <input type="checkbox" name="ingredients" class="ingredient" value="beans" id="beans">
+                                <img src="img/beans.png" alt="hot sauce image" class="tooltip" title="These are beans.">
+                            </div>
+                        </label>
+                        <label for="rice">
+                            <div class="ingredients__box--pictures rice"><i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                <input type="checkbox" name="ingredients" class="ingredient" value="rice" id="rice">
+                                <img src="img/rice.png" alt="sour cream image" class="tooltip" title="Rice?">
+                            </div>
+                        </label>
+                        <label for="hotSauce">
+                            <div class="ingredients__box--pictures hotSauce"><i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                <input type="checkbox" name="ingredients" class="ingredient" value="hotSauce" id="hotSauce">
+                                <img src="img/hotSauce-flame.png" alt="hot sauce image" class="tooltip" title="Hot Sauce.  Caution - very hot.">
+                            </div>
+                        </label>
+                        <label for="tomato">
+                            <div class="ingredients__box--pictures tomato"><i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                <input type="checkbox" name="ingredients" class="ingredient" value="tomato" id="tomato">
+                                <img src="img/tomato.png" alt="hot sauce image" class="tooltip" title="Tomato... a classic">
+                            </div>
+                        </label>
+                        <label for="lime">
+                            <div class="ingredients__box--pictures lime"><i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                <input type="checkbox" name="ingredients" class="ingredient" value="lime" id="lime">
+                                <img src="img/lime.png" alt="hot sauce image" class="tooltip" title="Lime. Why not?">
+                            </div>
+                        </label>
+                    </section>
+                    <section class="messageBox">
+                        <h2>Ingredients in your list</h2>
+                        <h4 class="invitation">Go Ahead!!</h4>
+                        <ul class="ingredientsList "></ul>
+                    </section>
+                </div>
+                <div class="messageWrapper">
+                <section class="raccoon">
+                    <img src="img/bunny.jpg" alt="" class="tooltip" title="Do you have something for me?">
+                    <p>Don't like your burrito? Mr. Bunny will take it! <br>Click here!</p>
+                    <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                </section>
+
+
+
+                <section class="calorieBox">
+                   <h2>Calorie Meter</h2>
+                   <span class="calorieMeter">0</span>
+                </section>
+                </div>
+            </main> <!-- end of main menu-->
+            <footer>
+                <p></p>
+            </footer>
+        </div> <!-- end of wrapper div -->
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/tooltipster.bundle.min.js"></script>
+        <!-- <script src="js/tooltipster.core.min.js"></script> -->
+        <script src="js/main.js"></script>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>
