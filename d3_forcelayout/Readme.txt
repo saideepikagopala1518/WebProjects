@@ -1,0 +1,1 @@
+Project 41. In mac,  install mamp server, download the source code and place it in mamp/htdocs.2. Run using: http://localhost:8888/foldername/project4.html3. In windows,  install wamp server, download the source code and place it in webapps/www.4. Run using: http://localhost:8888/foldername/project4.html
