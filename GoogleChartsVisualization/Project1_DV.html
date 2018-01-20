@@ -1,0 +1,169 @@
+<html>
+<head>
+    <title> DV_Project </title>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    
+        
+    <script type="text/javascript">        
+        google.load('visualization', '1.0', { 'packages': ['controls'] });
+        google.setOnLoadCallback(queryData);
+
+        // Query the data from google spreadsheet.  
+        function queryData() {
+            // Add "/gviz/tq?tq=" to the end of the spreadsheet URL to convert it to JSON. 
+            var query = new google.visualization.Query(
+                'https://docs.google.com/spreadsheets/d/1hQ8Qr8m2UBpibIwQWEkRJtOzKGBfkzFxP4uHOJou9ko/gviz/tq?tq=');
+				 query.setQuery('SELECT A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X');
+            query.send(handleQueryResponse);
+        }
+
+        // Error Handler function 
+        function handleQueryResponse(response) {
+            if (response.isError()) {
+                alert('Error in query: ' + response.getMessage() + ' '
+                 + response.getDetailedMessage());
+                return;
+            }
+
+            // Create a data table. 
+            var dataTable = response.getDataTable();
+
+            // Create Column chart representing the profits of the cafeteria every day.
+            var barChart = new google.visualization.ChartWrapper({
+                'chartType': 'ColumnChart',
+                'containerId': 'bar_chart_div',
+                'view': { 'columns': [1,22] },
+                'options': {
+                    hAxis: { title: 'Day', format:'M/d/yy' },
+                    vAxis: { title: 'Profit',format: '###'},
+                    'title':'Profit each day'
+                }
+
+            });
+
+            
+		
+            // Create Bar chart representing the relation between the number of wraps sold and wasted every day.
+            var baarChart = new google.visualization.ChartWrapper({
+                'chartType': 'BarChart',
+                'containerId': 'baar_chart_div',
+                'view': { 'columns': [1, 6,7] },
+                'options': {
+                    hAxis: { title: 'Number', format:'###' },
+                    vAxis: { title: 'Day',format: 'M/d/yy'},
+                    'title': 'Wraps Sold vs Wraps Wasted'
+                }
+            });
+			
+			
+	
+			
+			
+
+            // Create Pie chart to represent the sales of the cafeteria
+           var salespieChart = new google.visualization.ChartWrapper({
+                'chartType': 'PieChart',
+                'containerId': 'salespie_chart_div',
+                'view': { 'columns': [3, 19] },
+                'options': {
+                                       
+                   'title': 'Sales per Day' // Put the title of the chart here. 
+                },
+            }); 
+            
+           // Create Pie chart to represent the items wasted by the Cafetria 
+           var wastepieChart = new google.visualization.ChartWrapper({
+                'chartType': 'PieChart',
+                'containerId': 'wastepie_chart_div',
+                'view': { 'columns': [3, 21] },
+                'options': {
+                                       
+                   'title': 'Wastage per Day' 
+                },
+            }); 
+			
+            // Create a scatter plot to study the influence of Temperature on items wasted.
+			var scatterChart = new google.visualization.ChartWrapper({
+				'chartType': 'ScatterChart',
+				'containerId': 'scatter_chart_div',
+                'view': {'columns': [20,21]},
+				'options': {
+					hAxis: { title: 'Temperature' },
+                    vAxis: { title:'Items Wasted',format: '###'},
+					'title': 'Temperature vs Items Wasted',
+                
+				},
+				
+							
+			});
+            
+
+            // Create filter representing every day
+            var dayFilter = new google.visualization.ControlWrapper({
+                'controlType': 'CategoryFilter',
+                'containerId': 'day_filter_div',
+                'options': {
+                    'filterColumnLabel': 'DayofWeek',
+
+                    ui: { 'labelStacking': 'vertical', 'label': 'DayofWeek' }
+                }
+            });
+			
+
+
+            // Create a dashboard
+            var dashboard = new google.visualization.Dashboard(document.getElementById('dashboard_div'));
+
+            // Bind controls with charts. 
+            
+
+            dashboard.bind([dayFilter],[barChart,baarChart,scatterChart,salespieChart,wastepieChart]);
+
+            // Draw the dashboard. 
+            dashboard.draw(dataTable);
+        }
+    </script>
+</head>
+ 
+<body>
+    <h2><center>Data Visualization - Project 1 </center> </h2>
+    <div id="dashboard_div">
+        <table>
+            <tr>
+			<td>
+                    <div id="day_filter_div" style="position: absolute;top:75;left:150">
+					<br /></div></td></tr>
+                 <tr>
+                <td>
+                    <div id="bar_chart_div" style="height: 350px; width: 1020px; border-style: groove;position: absolute;top:150;left:100">
+                    </div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+					<div id="scatter_chart_div" style="height: 350px; width: 500px; border-style: groove;position: absolute;top:525;left: 100">
+                    </div> 
+                </td>
+                <td>
+					<div id="baar_chart_div" style="height: 350px; width: 500px; border-style: groove;position: absolute;top:525;left: 620">
+                    </div>
+				
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="salespie_chart_div" style="height: 350px; width: 600px;position: absolute;top:900;left: 100">
+                    </div>
+                
+                </td>
+                <td>
+                    <div id="wastepie_chart_div" style="height: 350px; width: 600px;position: absolute;top:900;left:600">
+                    </div>
+                
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

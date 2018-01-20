@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Project 2 Marker Cluster Implementation</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+	<div id="floating-panel">
+        <input id="TextAddressRadius" placeholder="Enter an Search Address" type="text" />
+        <b>Radius </b>
+           
+        
+    </div>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script>   
+        var markers = [];     
+        google.load('visualization', '1.0', { 'packages': ['controls'] });
+        google.setOnLoadCallback(queryData);
+        
+        function queryData() {            
+            var query = new google.visualization.Query('http://www.google.com/fusiontables/gvizdata?tq=' + encodeURIComponent("SELECT 'latitude', 'longitude' FROM 1-zkmZXdMhgzNl8MFnzYQCr04qaF1X90IBbV6zkae"));
+			query.send(handleQueryResponse);
+        }
+
+        function handleQueryResponse(response) {
+			if (response.isError()) {
+					alert('Error in query: ' + response.getMessage() + ' '+ response.getDetailedMessage());
+					return;
+				}
+
+			for (i = 0; i < response.getDataTable().getNumberOfRows(); i++) {
+			    var latLng = new google.maps.LatLng(response.getDataTable().getValue(i, 0),response.getDataTable().getValue(i, 1));
+			    var marker = new google.maps.Marker({'position': latLng});
+			    markers.push(marker);
+			}
+			var markerCluster = new MarkerClusterer(map, markers);
+            }
+
+        var map;
+        function initMap() {
+            var latNum = 42.32391, lngNum = -72.6566;
+            map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 10,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                center: {lat: latNum, lng: lngNum}
+            });
+        }
+    </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5VQEJZtjm1itfo6J2zb2L6vvvl6hMgEQ&callback=initMap" async defer></script>
+      <script type="text/javascript" src="http://grid.cs.gsu.edu/yzhu/csc4730-6730/markerclusterer.js"></script>
+  </body>
+</html>
+
+
